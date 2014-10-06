@@ -1,0 +1,48 @@
+div {
+	border: 1px solid;
+	margin: 5px; /*this creates space between divs etc*/
+	padding: 3px;
+	
+}
+
+#div-before {
+	background-color: blue;
+	position:static; /*do this every time so you are sure the position is right.*/
+}
+
+#div-1 {
+	background-color: black;
+	color: white;/*text color*/
+	position: relative;
+	/*
+	position:relative (stays within nested conctructs, not absolute)
+	top: 20px (move 20 px down from the top)
+	left:-40px (move 40px to the left)
+	*/
+	/*(if this container is "position: relative" and its child is "position: absolute"
+	the child treats this div as the whole page so eg div-1a below will got ot the top righ corner 
+	of this parent div)
+	*/
+	
+}
+
+#div-1a {
+	background-color: red;
+	color: white;/*text color*/
+	position: absolute;/*(will not obey positioning of nested constructs, uses the whole window)*/
+	top: 0px;
+	right: 0px;
+	width: 200px;
+	
+
+}
+
+#div-1b {
+	background-color: #aaaaaa;
+	color: white;/*text color*/
+}
+
+#div-1c {
+	background-color: green;
+	color: white;/*text color*/
+}
